@@ -72,14 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Invitación de Grado - José Ángel" },
+      { name: "description", content: "Invitación oficial de Grado de José Ángel Martínez Rodelo" },
+      { name: "author", content: "José Ángel Martínez" },
+      { property: "og:title", content: "Mi Grado - José Ángel" },
+      { property: "og:description", content: "Ceremonia de Grado - Ingeniería de Sistemas" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
