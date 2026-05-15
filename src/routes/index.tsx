@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
-import heroImg from "@/assets/graduate-hero.jpg";
+import heroImg from "@/assets/graduate-hero.png";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -411,10 +411,10 @@ function Invitation() {
                   <div className="absolute bottom-12 left-4 w-28 h-28 rounded-full opacity-40" style={{ background: "radial-gradient(circle, oklch(0.82 0.15 82 / 0.45) 0%, transparent 70%)", filter: "blur(10px)" }} />
                 </div>
 
-                  <div className="relative z-10 grid md:grid-cols-2 md:min-h-[900px]">
-                    {/* LEFT — info panel */}
-                    <div className="relative px-5 pt-10 pb-7 md:pt-16 md:px-14 md:py-16 flex flex-col">
-                    {/* Cap — real glitter, large centered on mobile (Canva style), floating */}
+                    <div className="relative z-10 grid md:grid-cols-2 md:min-h-[900px]">
+                      {/* LEFT — info panel */}
+                      <div className="relative px-5 pt-10 pb-7 md:pt-16 md:px-8 lg:px-14 md:py-16 flex flex-col">
+                      {/* Cap — real glitter, large centered on mobile (Canva style), floating */}
                     <div className="flex justify-center md:justify-start relative">
                       <div aria-hidden className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full animate-glow-breathe" style={{ background: "radial-gradient(circle, oklch(0.82 0.15 82 / 0.35) 0%, transparent 65%)", filter: "blur(8px)" }} />
                       <CapIcon className="relative w-40 h-32 md:w-28 md:h-24 animate-float-soft" />
@@ -435,7 +435,7 @@ function Invitation() {
                       <h1
                         className="font-luxe leading-[0.9] mt-2 shimmer-text"
                         style={{
-                          fontSize: "clamp(4rem, 13vw, 8.5rem)",
+                          fontSize: "clamp(3.5rem, 8vw, 6.5rem)",
                           letterSpacing: "0.08em",
                         }}
                       >
@@ -455,7 +455,7 @@ function Invitation() {
                       <p className="font-serif-elegant italic text-3xl md:text-4xl gradient-gold-text leading-tight">
                         José Ángel
                       </p>
-                      <h2 className="font-luxe text-4xl md:text-6xl text-foreground tracking-[0.08em] leading-[0.95] mt-2">
+                      <h2 className="font-luxe text-4xl md:text-5xl lg:text-6xl text-foreground tracking-[0.08em] leading-[0.95] mt-2">
                         MARTÍNEZ<br />RODELO
                       </h2>
                       <Flourish className="mt-5 md:justify-start" />
