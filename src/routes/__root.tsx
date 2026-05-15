@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 
+import { ChatBot } from "@/components/ChatBot";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -102,6 +103,11 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener("contextmenu",e=>e.preventDefault());document.addEventListener("keydown",e=>{if(e.key==="F12"||e.ctrlKey&&e.shiftKey&&["I","J","C"].includes(e.key)||e.ctrlKey&&e.key==="U")e.preventDefault()})`,
+          }}
+        />
       </body>
     </html>
   );
@@ -113,6 +119,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <ChatBot />
     </QueryClientProvider>
   );
 }

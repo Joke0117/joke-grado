@@ -411,9 +411,9 @@ function Invitation() {
                   <div className="absolute bottom-12 left-4 w-28 h-28 rounded-full opacity-40" style={{ background: "radial-gradient(circle, oklch(0.82 0.15 82 / 0.45) 0%, transparent 70%)", filter: "blur(10px)" }} />
                 </div>
 
-                <div className="relative z-10 grid md:grid-cols-2 md:min-h-[820px]">
-                  {/* LEFT — info panel */}
-                  <div className="relative px-5 pt-10 pb-7 md:pt-14 md:px-12 md:py-14 flex flex-col">
+                  <div className="relative z-10 grid md:grid-cols-2 md:min-h-[900px]">
+                    {/* LEFT — info panel */}
+                    <div className="relative px-5 pt-10 pb-7 md:pt-16 md:px-14 md:py-16 flex flex-col">
                     {/* Cap — real glitter, large centered on mobile (Canva style), floating */}
                     <div className="flex justify-center md:justify-start relative">
                       <div aria-hidden className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full animate-glow-breathe" style={{ background: "radial-gradient(circle, oklch(0.82 0.15 82 / 0.35) 0%, transparent 65%)", filter: "blur(8px)" }} />
@@ -430,7 +430,7 @@ function Invitation() {
                     </div>
 
                     {/* MI GRADO title */}
-                    <div className="mt-6 text-center md:text-left">
+                    <div className="mt-8 md:mt-10 text-center md:text-left">
                       <p className="font-luxe text-3xl md:text-4xl tracking-[0.5em] text-foreground/95 ml-[0.5em]">MI</p>
                       <h1
                         className="font-luxe leading-[0.9] mt-2 shimmer-text"
@@ -441,16 +441,16 @@ function Invitation() {
                       >
                         GRADO
                       </h1>
-                      <Flourish className="mt-5 md:justify-start" />
+                      <Flourish className="mt-6 md:mt-8 md:justify-start" />
                     </div>
 
                     {/* Subtitle */}
-                    <p className="mt-6 font-sans tracking-[0.35em] text-[0.7rem] md:text-xs uppercase text-foreground/80 text-center md:text-left">
+                    <p className="mt-6 md:mt-8 font-sans tracking-[0.35em] text-[0.7rem] md:text-xs uppercase text-foreground/80 text-center md:text-left">
                       Un sueño, un esfuerzo,<br />una nueva historia
                     </p>
 
                     {/* Graduando */}
-                    <div className="mt-10 text-center md:text-left">
+                    <div className="mt-10 md:mt-14 text-center md:text-left">
                       <p className="font-sans tracking-[0.45em] text-[0.65rem] uppercase text-gold mb-3">Graduando</p>
                       <p className="font-serif-elegant italic text-3xl md:text-4xl gradient-gold-text leading-tight">
                         José Ángel
@@ -477,14 +477,14 @@ function Invitation() {
                     </div>
 
                     {/* Event details */}
-                    <div className="mt-8 space-y-3 max-w-xs mx-auto md:mx-0 w-full">
+                    <div className="mt-10 md:mt-14 space-y-3 md:space-y-4 max-w-xs mx-auto md:mx-0 w-full">
                       {[
                         { svg: <CalIcon />, label: "29 de Mayo de 2026" },
                         { svg: <ClockIcon />, label: "3:00 PM · Ceremonia de Grado" },
                         { svg: <PinIcon />, label: "Salón Jumbo del Country" },
                         { svg: <PinIcon />, label: "Calle 76 con Cra. 54 · Barranquilla" },
                       ].map((it, i) => (
-                        <div key={i} className="flex items-center gap-4 py-2 border-b" style={{ borderColor: "oklch(0.78 0.14 80 / 0.25)" }}>
+                        <div key={i} className="flex items-center gap-4 py-2.5 md:py-3 border-b" style={{ borderColor: "oklch(0.78 0.14 80 / 0.25)" }}>
                           <span className="flex items-center justify-center w-9 h-9 rounded-md border shrink-0" style={{ borderColor: "oklch(0.78 0.14 80 / 0.45)", color: "var(--gold)" }}>
                             {it.svg}
                           </span>
@@ -493,7 +493,7 @@ function Invitation() {
                       ))}
                     </div>
                     {/* Google Maps link */}
-                    <div className="mt-4 flex justify-center md:justify-start">
+                    <div className="mt-5 md:mt-6 flex justify-center md:justify-start">
                       <a
                         href="https://maps.google.com/?q=Salon+Jumbo+del+Country+Barranquilla"
                         target="_blank"
@@ -508,10 +508,10 @@ function Invitation() {
                     </div>
 
                     {/* Bottom thanks */}
-                    <div className="mt-8 md:mt-10 text-center md:text-left">
+                    <div className="mt-10 md:mt-14 text-center md:text-left">
                       <p className="font-serif-elegant italic text-lg md:text-xl text-gold">Gracias a quienes</p>
                       <p className="font-sans text-[0.7rem] md:text-xs tracking-[0.2em] uppercase text-foreground/85 mt-1">hicieron posible este logro.</p>
-                      <Flourish className="mt-4 md:justify-start" />
+                      <Flourish className="mt-5 md:mt-6 md:justify-start" />
                     </div>
 
                     {/* Parents card — mobile only (inside info panel) */}
@@ -526,39 +526,48 @@ function Invitation() {
                   </div>
 
                   {/* RIGHT — photo (desktop only) */}
-                  <div className="relative hidden md:block min-h-[420px] md:min-h-full overflow-hidden">
+                  <div className="relative hidden md:block overflow-hidden">
+                    <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 30% 20%, oklch(0.78 0.14 80 / 0.25) 0%, transparent 60%)" }} />
                     <img
                       src={heroImg}
                       alt="José Ángel Martínez Rodelo"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover object-[center_15%]"
                     />
-                    {/* dark gradient overlay */}
-                    <div aria-hidden className="absolute inset-0" style={{ background: "linear-gradient(90deg, oklch(0.06 0.005 60) 0%, transparent 35%, transparent 65%, oklch(0.06 0.005 60 / 0.6) 100%)" }} />
-                    <div aria-hidden className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.06 0.005 60 / 0.4) 0%, transparent 30%, transparent 60%, oklch(0.06 0.005 60 / 0.85) 100%)" }} />
+                    <div aria-hidden className="absolute inset-0" style={{ background: "linear-gradient(90deg, oklch(0.06 0.005 60) 0%, oklch(0.06 0.005 60 / 0.3) 40%, transparent 60%, transparent 80%, oklch(0.06 0.005 60 / 0.5) 100%)" }} />
+                    <div aria-hidden className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.06 0.005 60 / 0.5) 0%, transparent 25%, transparent 55%, oklch(0.06 0.005 60 / 0.9) 100%)" }} />
+                    <div aria-hidden className="absolute top-0 left-0 right-0 h-[30%]" style={{ background: "linear-gradient(180deg, oklch(0.06 0.005 60 / 0.6) 0%, transparent 100%)" }} />
 
-                    {/* Diagonal gold accent lines (top-left wedge) */}
+                    {/* Gold light leak from top-right */}
+                    <div aria-hidden className="absolute -top-20 -right-20 w-80 h-80 rounded-full" style={{ background: "radial-gradient(circle, oklch(0.82 0.15 82 / 0.15) 0%, transparent 60%)", filter: "blur(40px)" }} />
+
+                    {/* Diagonal gold accent lines with glow */}
                     <svg aria-hidden className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
                       <defs>
                         <linearGradient id="goldline" x1="0" x2="1">
-                          <stop offset="0" stopColor="oklch(0.92 0.1 88)" />
+                          <stop offset="0" stopColor="oklch(0.97 0.08 88)" />
+                          <stop offset="0.5" stopColor="oklch(0.82 0.16 84)" />
                           <stop offset="1" stopColor="oklch(0.55 0.13 70)" />
                         </linearGradient>
                       </defs>
-                      {/* top-left diagonal */}
-                      <polyline points="0,18 22,0" fill="none" stroke="url(#goldline)" strokeWidth="0.4" vectorEffect="non-scaling-stroke" style={{ strokeWidth: 1.5 }} />
-                      <polyline points="0,28 32,0" fill="none" stroke="url(#goldline)" strokeWidth="0.3" vectorEffect="non-scaling-stroke" style={{ strokeWidth: 1, opacity: 0.6 }} />
-                      {/* bottom-right diagonal frame */}
-                      <polyline points="100,75 78,100" fill="none" stroke="url(#goldline)" strokeWidth="0.4" vectorEffect="non-scaling-stroke" style={{ strokeWidth: 1.5 }} />
-                      <polyline points="100,85 88,100" fill="none" stroke="url(#goldline)" strokeWidth="0.3" vectorEffect="non-scaling-stroke" style={{ strokeWidth: 1, opacity: 0.6 }} />
+                      <polyline points="0,15 18,0" fill="none" stroke="url(#goldline)" strokeWidth="1.8" opacity="0.8" />
+                      <polyline points="0,24 26,0" fill="none" stroke="url(#goldline)" strokeWidth="1" opacity="0.5" />
+                      <polyline points="0,33 35,0" fill="none" stroke="url(#goldline)" strokeWidth="0.6" opacity="0.3" />
+                      <polyline points="0,42 44,0" fill="none" stroke="url(#goldline)" strokeWidth="0.3" opacity="0.15" />
+                      <polyline points="100,72 78,100" fill="none" stroke="url(#goldline)" strokeWidth="1.8" opacity="0.8" />
+                      <polyline points="100,81 88,100" fill="none" stroke="url(#goldline)" strokeWidth="1" opacity="0.5" />
+                      <polyline points="100,90 96,100" fill="none" stroke="url(#goldline)" strokeWidth="0.6" opacity="0.3" />
                     </svg>
 
-                    {/* Parents card overlay (bottom-right) */}
-                    <div className="absolute bottom-5 right-5 left-5 md:left-auto md:max-w-[80%]">
-                      <div className="relative rounded-xl px-6 py-5 text-center md:text-right" style={{ background: "linear-gradient(135deg, oklch(0.08 0.005 60 / 0.92), oklch(0.05 0.005 60 / 0.92))", border: "1px solid oklch(0.78 0.14 80 / 0.5)", backdropFilter: "blur(10px)" }}>
+                    {/* Gold glow orb behind parents card */}
+                    <div aria-hidden className="absolute bottom-0 right-0 w-72 h-72" style={{ background: "radial-gradient(circle, oklch(0.82 0.15 82 / 0.2) 0%, transparent 60%)", filter: "blur(40px)" }} />
+
+                    {/* Parents card overlay */}
+                    <div className="absolute bottom-6 right-6 left-6 md:left-auto md:max-w-[75%]">
+                      <div className="relative rounded-xl px-6 py-5 text-center md:text-right" style={{ background: "linear-gradient(135deg, oklch(0.09 0.005 60 / 0.94), oklch(0.06 0.005 60 / 0.94))", border: "1px solid oklch(0.78 0.14 80 / 0.5)", backdropFilter: "blur(12px)", boxShadow: "0 8px 32px oklch(0 0 0 / 0.5)" }}>
                         <p className="font-sans tracking-[0.3em] text-[0.65rem] uppercase text-gold mb-3">Con el amor de mis padres</p>
-                        <p className="font-display text-lg md:text-xl text-foreground tracking-wide">JOSÉ MARTÍNEZ</p>
+                        <p className="font-display text-lg text-foreground tracking-wide">JOSÉ MARTÍNEZ</p>
                         <p className="font-serif-elegant italic text-gold text-base my-1">&</p>
-                        <p className="font-display text-lg md:text-xl text-foreground tracking-wide">YASMIRIS RODELO</p>
+                        <p className="font-display text-lg text-foreground tracking-wide">YASMIRIS RODELO</p>
                       </div>
                     </div>
                   </div>
@@ -569,7 +578,7 @@ function Invitation() {
 
           {/* COUNTDOWN — distinct deep wine/emerald backdrop */}
           <section
-            className="relative px-6 py-24 overflow-hidden"
+            className="relative px-6 md:px-16 py-24 md:py-32 overflow-hidden"
             style={{
               background:
                 "radial-gradient(ellipse at 20% 30%, oklch(0.22 0.06 25 / 0.55) 0%, transparent 55%), radial-gradient(ellipse at 80% 70%, oklch(0.18 0.07 280 / 0.5) 0%, transparent 55%), linear-gradient(180deg, oklch(0.09 0.015 30) 0%, oklch(0.07 0.02 290) 100%)",
@@ -580,14 +589,18 @@ function Invitation() {
             <div aria-hidden className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, var(--gold), transparent)" }} />
             <div aria-hidden className="absolute bottom-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, var(--gold), transparent)" }} />
 
+            {/* Desktop ambient glow */}
+            <div aria-hidden className="hidden md:block absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, oklch(0.78 0.14 80 / 0.08) 0%, transparent 60%)", filter: "blur(60px)" }} />
+            <div aria-hidden className="hidden md:block absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, oklch(0.78 0.14 80 / 0.06) 0%, transparent 60%)", filter: "blur(60px)" }} />
+
             <div className="relative max-w-5xl mx-auto text-center">
               <Reveal>
                 <p className="font-serif-elegant tracking-[0.5em] text-xs uppercase text-gold/85 mb-3">Cuenta Regresiva</p>
                 <Flourish className="mx-auto mb-6" />
-                <h2 className="font-luxe text-4xl md:text-6xl gradient-gold-text mb-14 tracking-[0.06em]">El Gran Día se Acerca</h2>
+                <h2 className="font-luxe text-4xl md:text-6xl gradient-gold-text mb-14 md:mb-20 tracking-[0.06em]">El Gran Día se Acerca</h2>
               </Reveal>
               <Reveal delay={150}>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                   {[
                     { l: "Días", v: t.d },
                     { l: "Horas", v: t.h },
@@ -597,7 +610,7 @@ function Invitation() {
                     <div key={it.l} className="relative">
                       <div className="absolute -inset-1 rounded-2xl opacity-40 blur-xl" style={{ background: "var(--gradient-gold)" }} />
                       <div
-                        className="relative gold-border-anim rounded-2xl py-9 px-4"
+                        className="relative gold-border-anim rounded-2xl py-9 md:py-12 px-4"
                         style={{
                           background:
                             "linear-gradient(180deg, oklch(0.14 0.01 60 / 0.95) 0%, oklch(0.09 0.005 60 / 0.95) 100%)",
@@ -605,11 +618,11 @@ function Invitation() {
                             "inset 0 1px 0 oklch(1 0 0 / 0.06), inset 0 0 30px oklch(0.78 0.14 80 / 0.08), 0 14px 40px oklch(0 0 0 / 0.5)",
                         }}
                       >
-                        <p className="font-luxe text-6xl md:text-7xl gradient-gold-text tabular-nums leading-none mb-3">
+                        <p className="font-luxe text-6xl md:text-8xl gradient-gold-text tabular-nums leading-none mb-3">
                           {String(it.v).padStart(2, "0")}
                         </p>
-                        <div className="mx-auto w-8 h-px mb-3" style={{ background: "linear-gradient(90deg, transparent, var(--gold), transparent)" }} />
-                        <p className="font-serif-elegant tracking-[0.4em] text-[0.65rem] uppercase text-gold/85">{it.l}</p>
+                        <div className="mx-auto w-8 md:w-10 h-px mb-3" style={{ background: "linear-gradient(90deg, transparent, var(--gold), transparent)" }} />
+                        <p className="font-serif-elegant tracking-[0.4em] text-[0.65rem] md:text-xs uppercase text-gold/85">{it.l}</p>
                       </div>
                     </div>
                   ))}
@@ -619,10 +632,10 @@ function Invitation() {
           </section>
 
           {/* GALLERY */}
-          <section className="px-6 py-24">
-            <div className="max-w-6xl mx-auto">
+          <section className="px-6 md:px-12 py-24 md:py-32">
+            <div className="max-w-7xl mx-auto">
               <Reveal>
-                <div className="text-center mb-14">
+                <div className="text-center mb-14 md:mb-20">
                   <p className="font-serif-elegant tracking-[0.45em] text-xs uppercase text-gold/80 mb-3">Galería</p>
                   <Flourish className="mx-auto mb-6" />
                   <h2 className="font-luxe text-4xl md:text-6xl gradient-gold-text tracking-[0.06em]">Momentos Inolvidables</h2>
@@ -635,42 +648,47 @@ function Invitation() {
           </section>
 
           {/* FINAL MESSAGE — premium closing */}
-          <section className="px-6 py-24 relative overflow-hidden">
+          <section className="px-6 md:px-16 py-24 md:py-32 relative overflow-hidden">
             <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 40%, oklch(0.78 0.14 80 / 0.08) 0%, transparent 60%)" }} />
             <div aria-hidden className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, oklch(0.82 0.15 82 / 0.5), transparent)" }} />
-            <div className="max-w-3xl mx-auto text-center">
+
+            {/* Desktop ambient glows */}
+            <div aria-hidden className="hidden md:block absolute top-1/3 left-0 w-96 h-96 pointer-events-none" style={{ background: "radial-gradient(circle, oklch(0.78 0.14 80 / 0.08) 0%, transparent 60%)", filter: "blur(60px)" }} />
+            <div aria-hidden className="hidden md:block absolute bottom-1/4 right-0 w-80 h-80 pointer-events-none" style={{ background: "radial-gradient(circle, oklch(0.78 0.14 80 / 0.06) 0%, transparent 60%)", filter: "blur(60px)" }} />
+
+            <div className="relative max-w-4xl mx-auto text-center">
               <Reveal>
                 {/* Label — neutral, not sentimental */}
                 <p className="font-serif-elegant tracking-[0.5em] text-xs uppercase text-gold/70 mb-5">Palabras de gratitud</p>
-                <Flourish className="mx-auto mb-10" />
+                <Flourish className="mx-auto mb-10 md:mb-14" />
 
                 {/* HEADLINE — user's exact text */}
-                <div className="relative mb-12">
-                  <div aria-hidden className="absolute -inset-8 rounded-3xl opacity-15 blur-3xl" style={{ background: "var(--gradient-gold)" }} />
-                  <p className="relative font-luxe text-4xl md:text-6xl shimmer-text tracking-[0.04em] leading-[1.15]">
+                <div className="relative mb-14 md:mb-20">
+                  <div aria-hidden className="absolute -inset-8 md:-inset-12 rounded-3xl opacity-15 blur-3xl" style={{ background: "var(--gradient-gold)" }} />
+                  <p className="relative font-luxe text-4xl md:text-7xl shimmer-text tracking-[0.04em] leading-[1.15]">
                     Con Dios al frente<br />
                     <span className="text-3xl md:text-5xl">y la familia como apoyo,</span><br />
                     <span className="text-2xl md:text-4xl text-foreground/80">todo sueño encuentra su camino.</span>
                   </p>
                 </div>
 
-                <Flourish className="mx-auto mb-10" />
+                <Flourish className="mx-auto mb-10 md:mb-14" />
 
                 {/* USER'S EXACT QUOTE */}
-                <blockquote className="relative max-w-xl mx-auto mb-12">
-                  <span aria-hidden className="absolute -top-4 -left-2 font-serif-elegant text-6xl text-gold/20 leading-none select-none">"</span>
-                  <p className="font-serif-elegant italic text-xl md:text-2xl text-foreground/85 leading-relaxed px-6">
+                <blockquote className="relative max-w-2xl mx-auto mb-14 md:mb-20">
+                  <span aria-hidden className="absolute -top-4 -left-2 md:-top-6 md:-left-4 font-serif-elegant text-6xl md:text-8xl text-gold/20 leading-none select-none">"</span>
+                  <p className="font-serif-elegant italic text-xl md:text-3xl text-foreground/85 leading-relaxed px-6 md:px-12">
                     Hoy este logro no es solo mío,<br />
                     también pertenece a quienes creyeron en mí<br />
                     desde el principio.
                   </p>
-                  <span aria-hidden className="absolute -bottom-6 -right-2 font-serif-elegant text-6xl text-gold/20 leading-none select-none">"</span>
+                  <span aria-hidden className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-4 font-serif-elegant text-6xl md:text-8xl text-gold/20 leading-none select-none">"</span>
                 </blockquote>
 
-                <Flourish className="mx-auto mb-12" />
+                <Flourish className="mx-auto mb-12 md:mb-16" />
 
                 {/* PILLARS — Dios · Fe · Familia */}
-                <div className="grid grid-cols-3 gap-5 mb-16 max-w-md mx-auto">
+                <div className="grid grid-cols-3 gap-5 md:gap-8 mb-16 md:mb-20 max-w-md md:max-w-lg mx-auto">
                   {[
                     {
                       icon: (
@@ -764,10 +782,10 @@ function Invitation() {
                   </div>
                 </div>
 
-                <Flourish className="mx-auto mb-6" />
-                <p className="font-serif-elegant tracking-[0.4em] text-xs uppercase text-gold/75 mb-3">Con gratitud</p>
-                <p className="font-luxe text-4xl gradient-gold-text tracking-[0.08em]">José Ángel Martínez R.</p>
-                <div className="mt-12 flex items-center justify-center gap-4">
+                <Flourish className="mx-auto mb-6 md:mb-8" />
+                <p className="font-serif-elegant tracking-[0.4em] text-xs uppercase text-gold/75 mb-4">Con gratitud</p>
+                <p className="font-luxe text-4xl md:text-6xl gradient-gold-text tracking-[0.08em]">José Ángel Martínez R.</p>
+                <div className="mt-12 md:mt-16 flex items-center justify-center gap-4">
                   <span className="block h-px w-16" style={{ background: "linear-gradient(90deg, transparent, var(--gold))" }} />
                   <span className="text-gold text-xl">✦</span>
                   <span className="block h-px w-16" style={{ background: "linear-gradient(90deg, var(--gold), transparent)" }} />
@@ -793,9 +811,9 @@ function Invitation() {
           </a>
 
           {/* ── FOOTER ── */}
-          <footer className="relative z-10 px-6 pb-10 pt-2">
+          <footer className="relative z-10 px-6 md:px-12 pb-10 md:pb-14 pt-2">
             <div
-              className="max-w-4xl mx-auto rounded-2xl px-8 py-8 text-center"
+              className="max-w-4xl mx-auto rounded-2xl px-8 md:px-12 py-8 md:py-12 text-center"
               style={{
                 background: "linear-gradient(135deg, oklch(0.07 0.008 60 / 0.98), oklch(0.05 0.005 60 / 0.98))",
                 border: "1px solid oklch(0.78 0.14 80 / 0.2)",
