@@ -796,7 +796,7 @@ function Invitation() {
 
           {/* Floating WhatsApp button */}
           <a
-            href={`https://wa.me/573142296307?text=${encodeURIComponent('🎓 ¡Hola José Ángel! Acabo de ver tu hermosa invitación y no me la puedo perder. ¡Ahí estaré el 29 de mayo celebrando contigo este enorme logro! Felicitaciones, te lo mereces todo. 🌟✨')}`}
+            href={`https://wa.me/573142296307?text=${encodeURIComponent('🎓 ¡Hola José Ángel! Acabo de ver tu invitación y no me la puedo perder. ¡Ahí estaré el 29 de mayo celebrando contigo este enorme logro! Felicitaciones, te lo mereces todo. 🌟✨')}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Confirmar asistencia por WhatsApp"
