@@ -420,12 +420,12 @@ function Invitation() {
                       <CapIcon className="relative w-40 h-32 md:w-28 md:h-24 animate-float-soft" />
                     </div>
 
-                    {/* Mobile portrait — small framed photo with golden halo */}
+                    {/* Mobile portrait — framed photo with golden halo (taller to fit portrait) */}
                     <div className="md:hidden mt-6 flex justify-center relative">
-                      <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full animate-glow-breathe" style={{ background: "radial-gradient(circle, oklch(0.82 0.15 82 / 0.45) 0%, transparent 65%)", filter: "blur(14px)" }} />
-                      <div className="relative w-48 h-48 rounded-full overflow-hidden animate-scale-in-soft ring-gold-glow">
-                        <img src={heroImg} alt="José Ángel Martínez Rodelo" className="w-full h-full object-cover object-[center_20%]" />
-                        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 55%, oklch(0.06 0.005 60 / 0.5) 100%)" }} />
+                      <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-72 rounded-[3rem] animate-glow-breathe" style={{ background: "radial-gradient(ellipse, oklch(0.82 0.15 82 / 0.45) 0%, transparent 65%)", filter: "blur(14px)" }} />
+                      <div className="relative w-48 h-64 rounded-t-full rounded-b-[2rem] overflow-hidden animate-scale-in-soft ring-gold-glow">
+                        <img src={heroImg} alt="José Ángel Martínez Rodelo" className="w-full h-full object-cover object-[center_10%]" />
+                        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 65%, oklch(0.06 0.005 60 / 0.6) 100%)" }} />
                       </div>
                     </div>
 
