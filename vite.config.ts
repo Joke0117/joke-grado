@@ -1,5 +1,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 function devApiProxy(): import("vite").PluginOption {
   return {
     name: "dev-api-proxy",
@@ -46,5 +48,9 @@ export default defineConfig({
     server: { entry: "server" },
     spa: { enabled: true },
   },
-  plugins: [devApiProxy()],
+  plugins: [devApiProxy(), cloudflare({
+    viteEnvironment: {
+      name: "ssr"
+    }
+  })],
 });
