@@ -8,7 +8,6 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 
-import { ChatBot } from "@/components/ChatBot";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -119,7 +118,6 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
-      <ChatBot />
     </QueryClientProvider>
   );
 }
