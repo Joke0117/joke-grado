@@ -49,6 +49,14 @@ export default async (req) => {
 
     const data = await res.json();
 
+    if (!res.ok || data?.error) {
+      const msg = data?.error?.message ?? data?.error ?? `HTTP ${res.status}`;
+      return new Response(JSON.stringify({ text: `Error de Gemini: ${msg}` }), {
+        status: 200,
+        headers: { "content-type": "application/json" },
+      });
+    }
+
     const text =
       data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "No pude generar una respuesta.";
 
@@ -57,8 +65,8 @@ export default async (req) => {
       headers: { "content-type": "application/json" },
     });
   } catch (err) {
-    return new Response(JSON.stringify({ error: err.message }), {
-      status: 500,
+    return new Response(JSON.stringify({ text: `Error del servidor: ${err.message}` }), {
+      status: 200,
       headers: { "content-type": "application/json" },
     });
   }
