@@ -25,41 +25,13 @@ export function ChatBot() {
 
     try {
       const history = messages.map((m) => ({ role: m.role, parts: [{ text: m.text }] }));
-      const contents = [
-        ...history,
-        { role: "user", parts: [{ text: userMsg.text }] },
-      ];
-
-      const isDev = import.meta.env.DEV;
-      let text: string;
-
-      if (isDev) {
-        const res = await fetch(
-          "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyB4zCsnvJltSWZKZxYyYjbFt7tXP6JbfHQ",
-          {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({
-              contents,
-              systemInstruction: {
-                parts: [{ text: "Eres un asistente amigable para la invitación de grado de José Ángel Martínez Rodelo. Responde preguntas sobre el evento. Sé cordial y breve." }],
-              },
-              generationConfig: { temperature: 0.7, maxOutputTokens: 500 },
-            }),
-          }
-        );
-        const data = await res.json();
-        text = data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "Lo siento, no pude procesar tu mensaje.";
-      } else {
-        const res = await fetch("/api/chat", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ message: userMsg.text, history }),
-        });
-        const data = await res.json();
-        text = data.text ?? "Lo siento, no pude procesar tu mensaje.";
-      }
-
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ message: userMsg.text, history }),
+      });
+      const data = await res.json();
+      const text = data.text ?? "Lo siento, no pude procesar tu mensaje.";
       setMessages((prev) => [...prev, { role: "assistant", text }]);
     } catch {
       setMessages((prev) => [
